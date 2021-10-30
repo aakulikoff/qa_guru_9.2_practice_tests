@@ -68,7 +68,9 @@ public class PracticeForm {
                 text(userEmail), text(gender));
 
 //        Проверка данных во всплывающем окне
-        $x("//td[text()='Student Name']").parent().shouldHave(text(firstname + " " + lastName));
+        $(byText("Student Name")).parent()
+                .shouldHave(text(firstname + " " + lastName));
+//        $x("//td[text()='Student Name']").parent().shouldHave(text(firstname + " " + lastName));
         $x("//td[text()='Student Email']").parent().shouldHave(text(userEmail));
         $x("//td[text()='Gender']").parent().shouldHave(text(gender));
         $x("//td[text()='Mobile']").parent().shouldHave(text(userNumber));
