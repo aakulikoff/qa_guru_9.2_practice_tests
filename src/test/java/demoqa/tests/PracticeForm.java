@@ -10,16 +10,16 @@ import static io.qameta.allure.Allure.step;
 
 public class PracticeForm {
 
-    @BeforeAll
-    static void beforeAll () {
-        Configuration.startMaximized = true;
-    }
+//    @BeforeAll
+//    static void beforeAll () {
+//        Configuration.startMaximized = true;
+//    }
 
 
-    @BeforeEach
-    void openPracticeForm(){
-        open("https://demoqa.com/automation-practice-form");
-    }
+//    @BeforeEach
+//    void openPracticeForm(){
+//        open("https://demoqa.com/automation-practice-form");
+//    }
 
     String  firstname = "Name",
             lastName = "Surname",
@@ -41,9 +41,11 @@ public class PracticeForm {
     @Test
     void registrationFormTest () {
 
-        step("Open students registration form", () ->
-            $(".practice-form-wrapper")
-                .shouldHave(text("Student Registration Form")));
+        step("Open students registration form", () -> {
+                    open("https://demoqa.com/automation-practice-form");
+                    $(".practice-form-wrapper")
+                            .shouldHave(text("Student Registration Form"));
+                });
 
         step("Fill students registration form", () -> {
             step("Fill user data", () -> {
