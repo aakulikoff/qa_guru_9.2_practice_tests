@@ -40,7 +40,7 @@ public class PracticeForm {
 
     @Test
     void registrationFormTest () {
-
+        sleep(7000);
             $(".practice-form-wrapper")
                 .shouldHave(text("Student Registration Form"));
                 $("#firstName").setValue(firstname);
