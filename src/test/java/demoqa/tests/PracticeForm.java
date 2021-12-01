@@ -8,18 +8,9 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 
-public class PracticeForm {
-
-    @BeforeAll
-    static void beforeAll () {
-        Configuration.startMaximized = true;
-    }
+public class PracticeForm extends TestBase{
 
 
-    @BeforeEach
-    void openPracticeForm(){
-        open("https://demoqa.com/automation-practice-form");
-    }
 
     String  firstname = "Name",
             lastName = "Surname",
