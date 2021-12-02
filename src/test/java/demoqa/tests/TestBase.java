@@ -14,7 +14,6 @@ public class TestBase {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
         Configuration.startMaximized = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
     }
 
     @BeforeEach

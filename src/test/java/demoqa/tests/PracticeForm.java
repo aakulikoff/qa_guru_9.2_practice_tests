@@ -31,13 +31,13 @@ public class PracticeForm extends TestBase{
 
     @Test
     void registrationFormTest () {
-            $(".practice-form-wrapper")
+        $(".practice-form-wrapper")
                 .shouldHave(text("Student Registration Form"));
-                $("#firstName").setValue(firstname);
-                $("#lastName").setValue(lastName);
-                $("#userEmail").setValue(userEmail);
-                $(byText(gender)).click();
-                $("#userNumber").setValue(userNumber);
+        $("#firstName").setValue(firstname);
+        $("#lastName").setValue(lastName);
+        $("#userEmail").setValue(userEmail);
+        $(byText(gender)).click();
+        $("#userNumber").setValue(userNumber);
 
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(monthOfBirth);
