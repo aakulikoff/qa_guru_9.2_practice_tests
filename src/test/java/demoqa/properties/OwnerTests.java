@@ -2,10 +2,11 @@ package demoqa.properties;
 
 import config.CredentialsConfig;
 import org.aeonbits.owner.ConfigFactory;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static java.lang.String.format;
 
+@Tag("properties")
 public class OwnerTests {
     public CredentialsConfig credentials =
             ConfigFactory.create(CredentialsConfig.class);
