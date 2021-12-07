@@ -1,0 +1,17 @@
+/// Local
+java  \
+"-DprojectName=DemoQA" \
+"-Denv=~Prod" \
+"-DreportLink=https://demoqa.com/automation-practice-form" \
+"-Dcomm=Проверка формы регистрации" \
+"-Dconfig.file=notification/telegram.json" \
+-jar allure-notifications-3.1.2.jar
+
+/// Remote
+java  \
+"-DprojectName=DemoQA" \
+"-Denv=~Prod" \
+"-DreportLink=https://demoqa.com/automation-practice-form" \
+"-Dcomm=Проверка формы регистрации" \
+"-Dconfig.file=notification/telegram.json" \
+-jar allure-notifications-3.1.2.jar
