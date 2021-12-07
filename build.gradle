@@ -1,13 +1,13 @@
 plugins {
     id 'java-library'
-    id 'io.qameta.allure' version '2.8.1'
+    id 'io.qameta.allure' version '2.9.6'
 }
 
 repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.16.0",
+def allureVersion = "2.16.1",
     selenideVersion = "5.24.0",
     junitVersion = "5.8.1"
 
@@ -15,7 +15,7 @@ allure {
     version = allureVersion
     autoconfigure = true
     aspectjweaver = true
-    configuration = "testImplementation"
+//    configuration = "testImplementation"
     useJUnit5 {
         version = allureVersion
     }
@@ -65,3 +65,12 @@ task many_tags_tests(type: Test) {
         excludeTags "prod"
     }
 }
+
+//java  \
+//"-DprojectName=DemoQA" \
+//"-Denv=~Prod" \
+//"-DreportLink=https://demoqa.com/automation-practice-form" \
+//"-Dcomm=Проверка формы регистрации" \
+//"-Dconfig.file=notification/telegram.json" \
+//-jar allure-notifications-3.1.2.jar
+
